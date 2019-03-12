@@ -16,13 +16,13 @@
 
 **Vim** 和 **Emacs** 就是非常值得投资的编辑器，如果你决定开始学习 Vim/Emacs，刚开始的时候会感觉高很痛苦，甚至会伤害到自己的生产力，但是没关系，通过两三周的专注练习后，就可以通过学习编辑器的死亡之谷，很快就可以赚回票价了。
 
-使用 Vim/Emacs 的另一个重要好处是，当你在处理一些线上问题的时候，有时候需要一个IDE，你发现在一个Term 终端上是运行不了图形界面的编辑器了，你只有 Vim/Emacs 这样的选择。在 Coolshell.cn 上有一篇《无插件Vim 编程技巧》（https://coolshell.cn/articles/11312.html）你可以移步一看。
+使用 Vim/Emacs 的另一个重要好处是，当你在处理一些线上问题的时候，有时候需要一个 IDE，你发现在一个Term 终端上是运行不了图形界面的编辑器了，你只有 Vim/Emacs 这样的选择。在 Coolshell 上有一篇《无插件Vim 编程技巧》（https://coolshell.cn/articles/11312.html）你可以移步一看。
 
-为什么不学习 notapad，因为，**使用高效编辑器的终极目标是抛弃鼠标，让手编辑的速度可以跟的上大脑思考的速度**。就我自己来说，从大二开始接触 Emacs 开始，我已经使用 5 年了，通过不断的对 Emacs 进行定制，已经有了一套自己的使用模式了，每次打开 Emacs 就像是打开了自己才知道的秘籍，这是其他IDE 都没有办法比的，通过不断定制自己的工具，可以激发自己创造的欲望。
+为什么不学习 notapad，因为，**使用高效编辑器的终极目标是抛弃鼠标，让手编辑的速度可以跟的上大脑思考的速度**。就我自己来说，从大二开始接触 Emacs 开始，已经使用 5 年了，通过不断的对 Emacs 进行定制，已经有了一套自己的使用模式了，每次打开 Emacs 就像是打开了自己才知道的秘籍，这是其他 IDE 都没有办法比的，通过不断定制自己的工具，可以激发自己创造的欲望。
 
-但是我不参加编辑器的圣战，这些都是无意义的口水战。在一次接触了 Vim 之后，我反而喜欢上 Vim 的编辑模式了，于是在 Emacs 中使用上了 Vim 的编辑模式，实际的情况是这两者并不冲突（皓哥翻译的那篇 《简明Vim 练级攻略》（https://coolshell.cn/articles/5426.html）文章非常不错）。
+但是我不参加编辑器的圣战，这些都是无意义的口水战。在一次接触了 Vim 之后，我反而喜欢上 Vim 的编辑模式了，于是在 Emacs 中使用上了 Vim 的编辑模式，实际的情况是这两者并不冲突（皓哥翻译的那篇 《简明 Vim 练级攻略》（https://coolshell.cn/articles/5426.html）文章非常不错）。
 
-在 Emacs 上，有很多有用的特性和插件。 Emacs 的 **org-mode**，这个工具用来写作，还可用来做任务管理，任务计时器，甚至可以用来做表格的计算。功能上已经完全不是 markdown 能比的，但是遗憾的是目前只能在 emacs 中使用（貌似有人在 Vim 上实现过）。
+在 Emacs 上，有很多有用的特性和插件。 Emacs 的 **org-mode**，这个工具用来写作，还可用来做任务管理，任务计时器，甚至可以用来做表格的计算。功能上已经完全不是 markdown 能比的，但是遗憾的是目前只能在 Emacs 中使用（貌似有人在 Vim 上实现过）。
 
 还有就是 Emacs 中的用来做文件管理的插件 **helm** 和 **ivy**，这两个插件完成的功能差不多，但是 helm 比较重量级一些，如果一个项目的代码量比较大时，文件的切换和搜索就没那么快了，所以我更喜欢轻量级的 ivy。
 
@@ -58,11 +58,11 @@
 
 ![](http://rayjun.oss-cn-beijing.aliyuncs.com/shell/Image.png)
 
-在不同的操作系统下，都有着很不错的命令行工具，比如 Mac 下的 **Iterm2**，Linux 下的原生命令行，如果你是在 Windows 下工作，问题也不大，因为 Windows 下现在有了 **WSL**。WSL提供了一个由微软开发的Linux兼容的内核接口（不包含Linux内核代码），然后可以在其上运行GNU用户空间，例如Ubuntu，openSUSE，SUSE Linux Enterprise Server，Debian和Kali Linux。这样的用户空间可能包含Bash shell和命令语言，使用本机GNU/Linux命令行工具（sed，awk等），编程语言解释器（Ruby，Python等），甚至是图形应用程序（使用主机端的X窗口系统）。
+在不同的操作系统下，都有着很不错的命令行工具，比如 Mac 下的 **Iterm2**，Linux 下的原生命令行，如果你是在 Windows 下工作，问题也不大，因为 Windows 下现在有了 **WSL**。WSL 提供了一个由微软开发的Linux兼容的内核接口（不包含Linux内核代码），然后可以在其上运行GNU用户空间，例如 Ubuntu，openSUSE，SUSE Linux Enterprise Server，Debian和Kali Linux。这样的用户空间可能包含 Bash shell 和命令语言，使用本机 GNU/Linux 命令行工具（sed，awk 等），编程语言解释器（Ruby，Python 等），甚至是图形应用程序（使用主机端的X窗口系统）。
 
 使用命令行可以完成所有日常的操作，新建文件夹（mkdir）、新建文件（touch）、移动（mv）、复制（cp）、删除（rm）等等。而且使用 Linux/Unix 命令行最好的方式是可以用 awk、sed、grep、xargs、find、sort 等等这样的命令，然后用管道把其串起来，就可以完成一个你想要的功能，尤其是一些简单的数据统计功能。这是Linux命令行不可比拟的优势。比如：
 
-- 查看连接你服务器top10用户端的IP地址：
+- 查看连接你服务器 top10 用户端的 IP 地址：
 
 `netstat -nat | awk  '{print  $5}' | awk -F ':' '{print $1}' | sort | uniq -c | sort -rn | head -n 10`
 
@@ -72,7 +72,7 @@
 
 在命令行中使用 **alias**  可以将使用频率很高命令或者比较复杂的命令合并成一个命令，或者修改原生的命令。
 
-下面这几个命令，可能是你天天都在打的，所以，你应该设置成 alias 来提高效率
+下面这几个命令，可能是你天天都在敲的。所以，你应该设置成 alias 来提高效率
 
 ```
 alias nis="npm install --save "
@@ -115,7 +115,7 @@ alias www='python -m SimpleHTTPServer 8000'
 
 - **ncdu** （Installation directions） 比 du 好用多了用。另一个选择是 nnn（https://github.com/jarun/nnn ）。
 
-- 如果你想把你的命令行操作建录制成一个SVG动图，那么你可以尝试使用 **asciinema** （https://asciinema.org/ ）和 **svg-trem** （https://github.com/marionebl/svg-term-cli ）。
+- 如果你想把你的命令行操作建录制成一个 SVG 动图，那么你可以尝试使用 **asciinema** （https://asciinema.org/ ）和 **svg-trem** （https://github.com/marionebl/svg-term-cli ）。
 
 - **httpie**(https://github.com/jakubroztocil/httpie) 是一个可以用来替代 curl 和 wget 的 http 客户端，httpie 支持 json 和语法高亮，可以使用简单的语法进行 http 访问: `http -v github.com`。
 
@@ -173,11 +173,11 @@ crontab 是 Linux 中的一个定时器，可以定制执行任务，上面的�
 
 我最喜欢的就是 **zsh** + **oh-my-zsh** + **zsh-autosuggestions** 的组合，你也可以试试看。其中 zsh 和 oh-my-zsh 算是常规操作了，但是 zsh-autosuggestions 特别有用，可以超级快速的帮你补全你输入过的命令，让命令行的操作更加高效。 
 
-你也许会说，用Python脚本或PHP来写脚本会比Shell更好更没有bug，但是还是那句话:
+你也许会说，用 Python 脚本或 PHP 来写脚本会比 Shell 更好更没有 bug，但是还是那句话:
 
-- 其一，如果你有一天要维护线上机器的时候，或是到了银行用户的系统（与外网完全隔离，而且服务器上没有安装Python/PHP或是他们的的高级库，那么，你只有Shell可以用了）。
+- 其一，如果你有一天要维护线上机器的时候，或是到了银行用户的系统（与外网完全隔离，而且服务器上没有安装 Python/PHP 或是他们的的高级库，那么，你只有 Shell 可以用了）。
 
-- 其二，而且，如果跟命令交互很多的话，Shell是不二之选，试想一下，如果你要去100台远程的机器上查access.log日志中有没有某个错误，完成这个工作你是用PHP/Python写脚本快还是用Shell写脚本快呢？
+- 其二，而且，如果跟命令交互很多的话，Shell 是不二之选，试想一下，如果你要去 100 台远程的机器上查access.log 日志中有没有某个错误，完成这个工作你是用 PHP/Python 写脚本快还是用 Shell 写脚本快呢？
 
 要写好一个脚本并不容易，下面有一些小模板供你参考：
 
@@ -283,7 +283,7 @@ Whi='\e[0;37m';     BWhi='\e[1;37m';    UWhi='\e[4;37m';    IWhi='\e[0;97m';    
 
 版本管理的工具对我来说已经不仅仅不是管理代码的工具了。任何需要不断优化，不断修改的内容都需要进行版本管理。
 
-版本管理的工具很多。现在还有好些人还不喜欢 Git 还在用 svn，那是因为他们并不知道 Git 的强大之处，这种脱机的版本管理可以让你在没有网的情况下提效代码变更，再加上 Git 切换branch快得不行，merge brach时会把branch 的改动情况一同 merge了，再有stash，cherry-pick等等这样的黑魔法加持，你的工作效率真的很爽的。如今最好用的应该就是 **Git** 了，在加上最近 **GitHub** 私有仓库的开放，让这一优势继续扩大。
+版本管理的工具很多。现在还有好些人还不喜欢 Git 还在用 svn，那是因为他们并不知道 Git 的强大之处，这种脱机的版本管理可以让你在没有网的情况下提效代码变更，再加上 Git 切换 branch 快得不行，merge brach 时会把 branch 的改动情况一同 merge 了，再有 stash，cherry-pick 等等这样的黑魔法加持，你的工作效率真的很爽的。如今最好用的应该就是 **Git** 了，在加上最近 **GitHub** 私有仓库的开放，让这一优势继续扩大。
 
 Git 这么好用的原因来源于其底层数据结构的设计，非常的有意思，如果你接触过区块链，你会发现 Git 底层的数据结构与区块链的数据结构有异曲同工之处。
 
@@ -291,24 +291,12 @@ Git 除了可以完成通常的版本管理之外，它还拥有一些很神奇�
 
 - 帮你找 bug 的命令: **git bisect**，通过二分搜索的方式来帮助你定位到引入 bug 的 commit。
 - 可以帮助你洞察一切的 **git blame** 可以给你文件的每行信息都进行注释，然后就可以看到关于该行修改的每一次 commit 的哈希标签、作者和提交日期。
-- 可以帮你恢复一切的 **git reflog**，通常我们 **git reset**命令都是慎用的，要不然就坏事了，但是 git relog 在你将变化提交之前，可以帮助你回到任何修改之前，包括 git reset。但是 relog 只是保存在本地，而且不是永久保存，有一个可以配置的过期时间。
+- 可以帮你恢复一切的 **git reflog**，通常我们 **git reset** 命令都是慎用的，要不然就坏事了，但是 git relog 在你将变化提交之前，可以帮助你回到任何修改之前，包括 git reset。但是 relog 只是保存在本地，而且不是永久保存，有一个可以配置的过期时间。
 
-Git 有多种用法，可以使用原生的 Git 命令行，原生的 Git 命令加上 shell 脚本的包装就可以做到很高效了。 Git 也有图形化的界面，比如 Git 安装包自带的 gitk 或者 TortoiseGit，因为比起命令行来太慢了。还有就是 magit，这是 Emacs 的一个插件，这个插件将所有 Git 的操作都融入到 Emacs 中了，只需要使用使用快捷键就能够完成 Git 的所有操作，但是同时又带有一点图形化的感觉，这么说有点苍白无力，看图: 
-
-![](http://rayjun.oss-cn-beijing.aliyuncs.com/emacs/emacs-git.jpg)
-
-我现在日常会使用 Git 来进行代码管理、博客文章的管理和自己的知识库的管理。这些内容使用版本管理起来的好处是可以看见自己的成长过程，每一次修改的内容，每一个想法的进化。
-
-下面推荐一下 Git 的学习资料:
-
-- Progit2，最好的深入学习 Git 的教材，而且是开源的https://github.com/progit/progit2。
-- Magit，Git 在 Emacs 上的打开方式：https://magit.vc/。
-- Vim-fugitive，Git 在 Vim 上的打开方式：https://github.com/tpope/vim-fugitive 。
-- git相关的shell 提示： https://github.com/magicmonty/bash-git-prompt。
-
-有时候，设置一下git的别名也是可以让你更高效工作的一件事，比如：
+有时候，设置一下 Git 的别名也是可以让你更高效工作的一件事，比如：
 
 使用如下的 `git lg` 别名
+
 ```
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
 ```
@@ -321,12 +309,24 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 
 ![](https://coolshell.cn/wp-content/uploads/2012/06/git.log_.02.png)
 
+除此之外，Git 还有好些比较有用的别名，下面这几个收集库，可以让你更高效更赏心悦目地使用 Git
 
-除此之外，git还有好些比较有用的别名，下面这几个收集库，可以让你更高效更赏心悦目地使用git
+- https://github.com/momeni/gittify 
+- https://github.com/GitAlias/gitalias
+- https://gist.github.com/mwhite/6887990
 
--  https://github.com/momeni/gittify 
--  https://github.com/GitAlias/gitalias
--  https://gist.github.com/mwhite/6887990
+Git 有多种用法，可以使用原生的 Git 命令行，原生的 Git 命令加上 shell 脚本的包装就可以做到很高效了。 Git 也有图形化的界面，比如 Git 安装包自带的 gitk 或者 TortoiseGit，因为比起命令行来太慢了。还有就是 magit，这是 Emacs 的一个插件，这个插件将所有 Git 的操作都融入到 Emacs 中了，只需要使用使用快捷键就能够完成 Git 的所有操作，但是同时又带有一点图形化的感觉，这么说有点苍白无力，看图: 
+
+![](http://rayjun.oss-cn-beijing.aliyuncs.com/emacs/emacs-git.jpg)
+
+我现在日常会使用 Git 来进行代码管理、博客文章的管理和自己的知识库的管理。这些内容使用版本管理起来的好处是可以看见自己的成长过程，每一次修改的内容，每一个想法的进化。
+
+下面推荐一下 Git 的学习资料:
+
+- Progit2，最好的深入学习 Git 的教材，而且是开源的https://github.com/progit/progit2。
+- Magit，Git 在 Emacs 上的打开方式：https://magit.vc/。
+- Vim-fugitive，Git 在 Vim 上的打开方式：https://github.com/tpope/vim-fugitive 。
+- Git 相关的 shell 提示： https://github.com/magicmonty/bash-git-prompt。
 
 happy hacking！
 
