@@ -323,10 +323,10 @@ Git 有多种用法，可以使用原生的 Git 命令行，原生的 Git 命令
 
 下面推荐一下 Git 的学习资料:
 
-- Progit2，最好的深入学习 Git 的教材，而且是开源的https://github.com/progit/progit2。
-- Magit，Git 在 Emacs 上的打开方式：https://magit.vc/。
-- Vim-fugitive，Git 在 Vim 上的打开方式：https://github.com/tpope/vim-fugitive 。
-- Git 相关的 shell 提示： https://github.com/magicmonty/bash-git-prompt。
+- Progit2，最好的深入学习 Git 的教材，而且是开源的https://github.com/progit/progit2
+- Magit，Git 在 Emacs 上的打开方式：https://magit.vc/
+- Vim-fugitive，Git 在 Vim 上的打开方式：https://github.com/tpope/vim-fugitive
+- Git 相关的 shell 提示： https://github.com/magicmonty/bash-git-prompt
 
 happy hacking！
 
