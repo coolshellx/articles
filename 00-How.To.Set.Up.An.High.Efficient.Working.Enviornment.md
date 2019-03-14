@@ -351,7 +351,7 @@ Google的Shell脚本的代码规范：
 
 版本管理的工具对我来说已经不仅仅不是管理代码的工具了。任何需要不断优化，不断修改的内容都需要进行版本管理。
 
-版本管理的工具很多。现在还有好些人还不喜欢 Git 还在用 svn，那是因为他们并不知道 Git 的强大之处，这种脱机的版本管理可以让你在没有网的情况下提效代码变更，再加上 Git 切换 branch 快得不行，merge brach 时会把 branch 的改动情况一同 merge 了，这样可以让你看到整个历史。再有 stash，cherry-pick 等等这样的黑魔法加持，你的工作效率真的很爽的。如今最好用的应该就是 **Git** 了，在加上最近 **GitHub** 私有仓库的开放，让这一优势继续扩大。
+版本管理的工具很多。现在还有好些人还不喜欢 Git 还在用 svn，那是因为他们并不知道 Git 的强大之处，这种脱机的版本管理可以让你在没有网的情况下提效代码变更，再加上 Git 切换 branch 快得不行，merge branch 时会把 branch 的改动情况一同 merge 了，这样可以让你看到整个历史。再有 stash，cherry-pick 等等这样的黑魔法加持，你的工作效率真的很爽的。如今最好用的应该就是 **Git** 了，在加上最近 **GitHub** 私有仓库的开放，让这一优势继续扩大。
 
 Git 这么好用的原因来源于其底层数据结构的设计，非常的有意思，如果你接触过区块链，你会发现 Git 底层的数据结构与区块链的数据结构有异曲同工之处。
 
@@ -359,9 +359,9 @@ Git 除了可以完成通常的版本管理之外，它还拥有一些很神奇�
 
 - 帮你找 bug 的命令: **git bisect**，通过二分搜索的方式来帮助你定位到引入 bug 的 commit。
 - 可以帮助你洞察一切的 **git blame** 可以给你文件的每行信息都进行注释，然后就可以看到关于该行修改的每一次 commit 的哈希标签、作者和提交日期。
-- 可以帮你恢复一切的 **git reflog**，通常我们 **git reset** 命令都是慎用的，要不然就坏事了，但是 git relog 在你将变化提交之前，可以帮助你回到任何修改之前，包括 git reset。但是 relog 只是保存在本地，而且不是永久保存，有一个可以配置的过期时间。
+- 可以帮你恢复一切的 **git reflog**，通常我们 **git reset** 命令都是慎用的，要不然就坏事了，但是 git relog 在你将变化提交之前，可以帮助你回到任何修改之前，包括 git reset。但是 reflog 只是保存在本地，而且不是永久保存，有一个可以配置的过期时间。
 
-除此之外，还有一些git的小技巧：
+除此之外，还有一些 Git 的小技巧：
 
 - 如果你当前修改的文档在你本地的master上，然后你想把这个修改迁移到一个branch上，这样方便你做PR，如果这些修改还没有被add，那么你可以使用 `git checkout -b new_branch_name` 来完成。
 - 如果你commit后，还没有push，你想修改一下这前的commit，你可以使用 `git commit --amend`
@@ -381,11 +381,11 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 
 就可以把原来的 `git log` 的输出
 
-![](https://coolshell.cn/wp-content/uploads/2012/06/git.log_.01.png)
+![](../../Desktop/git.log_.01.png)
 
 变成下面这个样子
 
-![](https://coolshell.cn/wp-content/uploads/2012/06/git.log_.02.png)
+![](../../Desktop/git.log_.02.png)
 
 除此之外，Git 还有好些比较有用的别名，下面这几个收集库，可以让你更高效更赏心悦目地使用 Git
 
@@ -406,7 +406,7 @@ Git 有多种用法，可以使用原生的 Git 命令行，原生的 Git 命令
 - Vim-fugitive，Git 在 Vim 上的打开方式：https://github.com/tpope/vim-fugitive
 - Git 相关的 shell 提示： https://github.com/magicmonty/bash-git-prompt
 
-happy hacking！
+Happy hacking！
 
 (完)
 
