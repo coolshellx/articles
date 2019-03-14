@@ -83,6 +83,7 @@ alias update='sudo apt-get update && sudo apt-get upgrade'
 alias ..="cd .."
 alias ...="cd ..; cd .."
 alias www='python -m SimpleHTTPServer 8000'
+alias sock5='ssh -D 8080 -q -C -N -f user@your.server' 
 ```
 你还可以参考如下的一些文章，看看别人是怎么用好 `alias` 的
 
@@ -91,13 +92,14 @@ alias www='python -m SimpleHTTPServer 8000'
 - https://www.linuxtrainingacademy.com/23-handy-bash-shell-aliases-for-unix-linux-and-mac-os-x/
 - https://brettterpstra.com/2013/03/31/a-few-more-of-my-favorite-shell-aliases/
 
+
 命令行中除了原生的命令之外，还有很多可以提升使用体验的工具。下面罗列一些很不错的命令，把原生的命令增强地很厉害:
 
-- **fasd** 增强了 cd 命令 （https://github.com/clvv/fasd ）。
+- **fasd** 增强了 `cd` 命令 （https://github.com/clvv/fasd ）。
 
-- **bat** 增强了 cat 命令 （https://github.com/sharkdp/bat ）。
+- **bat** 增强了 `cat` 命令 （https://github.com/sharkdp/bat ）。如果你想要有语法高亮的 `cat`，可以试试 **ccat**(https://github.com/jingweno/ccat)
 
-- **exa** 增强了 ls 命令（https://github.com/ogham/exa ），如果你需要在很多目录上浏览各种文件 ，**ranger** 命令可以比 cd 和 cat 更有效率（https://github.com/ranger/ranger ），甚至可以在你的终端预览图片。
+- **exa** 增强了 `ls` 命令（https://github.com/ogham/exa ），如果你需要在很多目录上浏览各种文件 ，**ranger** 命令可以比 `cd` 和 `cat` 更有效率（https://github.com/ranger/ranger ），甚至可以在你的终端预览图片。
 
 - **fd** 是一个比 `find` 更简单更快的命令（https://github.com/sharkdp/fd ），他还会自动地忽略掉一些你配置在 `.gitignore` 中的文件，以及 `.git` 下的文件。
 
@@ -111,7 +113,7 @@ alias www='python -m SimpleHTTPServer 8000'
 
 - 如果你想搜索以前打过的命令，不要再用 Ctrl +R 了，你可以使用 **fzf** （https://github.com/junegunn/fzf ）你用过就知道有多强了。
 
-- **htop** （Installation directions） 是 top 的一个加强版。
+- **htop** （Installation directions） 是 top 的一个加强版。然而，还有很多的各式各样的top，比如：用于看IO负载的 **iotop**，网络负载的 **iftop**, 以及把这些top都集成在一起的 **atop**。
 
 - **ncdu** （Installation directions） 比 du 好用多了用。另一个选择是 nnn（https://github.com/jarun/nnn ）。
 
@@ -124,6 +126,10 @@ alias www='python -m SimpleHTTPServer 8000'
 - **Taskbook**(https://github.com/klaussinani/taskbook) 是可以完全在命令行中使用的任务管理器 ，支持 ToDo 管理，还可以为每个任务加上优先级。
 
 - **sshrc** (sshrc：https://github.com/Russell91/sshrc ) 是个神器，在你登录远程服务器的时候也能使用本机的 shell 的 rc 文件中的配置。
+
+- **goaccess** (https://github.com/allinurl/goaccess) 这个是一个轻量级的分析统计日志文件的工具，主要是分析各种各样的 access log。
+
+
 
 关于这些增加命令，参考自下面的这些文章
 
@@ -173,11 +179,11 @@ crontab 是 Linux 中的一个定时器，可以定制执行任务，上面的�
 
 我最喜欢的就是 **zsh** + **oh-my-zsh** + **zsh-autosuggestions** 的组合，你也可以试试看。其中 zsh 和 oh-my-zsh 算是常规操作了，但是 zsh-autosuggestions 特别有用，可以超级快速的帮你补全你输入过的命令，让命令行的操作更加高效。 
 
-你也许会说，用 Python 脚本或 PHP 来写脚本会比 Shell 更好更没有 bug，但是还是那句话:
+你也许会说，用 Python 脚本或 PHP 来写脚本会比 Shell 更好更没有 bug，但我要申辩一下:
 
 - 其一，如果你有一天要维护线上机器的时候，或是到了银行用户的系统（与外网完全隔离，而且服务器上没有安装 Python/PHP 或是他们的的高级库，那么，你只有 Shell 可以用了）。
 
-- 其二，而且，如果跟命令交互很多的话，Shell 是不二之选，试想一下，如果你要去 100 台远程的机器上查access.log 日志中有没有某个错误，完成这个工作你是用 PHP/Python 写脚本快还是用 Shell 写脚本快呢？
+- 其二，而且，如果要跟命令行交互很多的话，Shell 是不二之选，试想一下，如果你要去 100 台远程的机器上查access.log 日志中有没有某个错误，完成这个工作你是用 PHP/Python 写脚本快还是用 Shell 写脚本快呢？
 
 要写好一个脚本并不容易，下面有一些小模板供你参考：
 
@@ -246,9 +252,68 @@ Cya='\e[0;36m';     BCya='\e[1;36m';    UCya='\e[4;36m';    ICya='\e[0;96m';    
 Whi='\e[0;37m';     BWhi='\e[1;37m';    UWhi='\e[4;37m';    IWhi='\e[0;97m';    BIWhi='\e[1;97m';   On_Whi='\e[47m';    On_IWhi='\e[0;107m';
 ```
 
+取当前运行脚本绝对路径的示例：（注：Linux下可以用 `dirname $(readlink -f $0)` ）
+
+```
+FILE="$0"
+while [[ -h ${FILE} ]]; do
+    FILE="`readlink "${FILE}"`"
+done
+pushd "`dirname "${FILE}"`" > /dev/null
+DIR=`pwd -P`
+popd > /dev/null
+```
+
+如何在远程服务器运行一个本地脚本
+
+```
+#无参数
+ssh user@server 'bash -s' < local.script.sh
+
+#有参数
+ssh user@server ARG1="arg1" ARG2="arg2" 'bash -s' < local_script.sh
+```
+
+如何检查一个命令是否存在，用 `which` 吗？最好不要用，因为很多操作系统的 `which` 命令没有设置退出状态码，这样你不知道是否是有那个命令。所以，你应该使用下面的方式。
+
+```
+# POSIX 兼容:
+command -v <the_command>
 
 
-下面推荐一些 Shell 和脚本的参考资料。
+# bash 环境:
+hash <the_command> 
+type <the_command> 
+
+# 示例：
+gnudate() {
+    if hash gdate 2>/dev/null; then
+        gdate "$@"
+    else
+        date "$@"
+    fi
+}
+```
+然后，如果要写出健壮性更好的脚本，下面是一些相关的技巧：
+
+
+- 使用 `-e` 参数，如：`set -e` 或是 `#!/bin/sh -e`，这样设置会让你的脚本出错就会停止运行，这样一来可以防止你的脚本在出错的情况下还在拼拿地干活停不下来。
+- 使用 `-u` 参数，如： `set -eu`，这意味着，如果你代码中有变量没有定义，就会退出。
+- 对一些变理，你可以使用默认值。如：`${FOO:-'default'}`
+- 处理你代码的退出码。这样方便你的脚本跟别的命令行或脚本集成。
+- 尽量不要使用 `;` 来执行多个命令，而是使用 `&&`，这样会在出错的时候停止运行后续的命令。
+- 对于一些字符串变量，使用引号括起，避免其中有空格或是别的什么诡异字符。
+- 如果你的脚有参数，你需要检查脚本运行是否带了你想要的参数，或是，你的脚本可以在没有参数的情况下安全的运行。
+- 为你的脚本设置 `-h` 和 `--help` 来显示帮助信息。千万不要把这两个参数用做为的功能。
+- 使用 `$()` 而不是 `` 来获得命令行的输出，主要原因是易读。
+- 小心不同的平台，尤其是 MacOS 和 Linux 的跨平台。
+- 对于 `rm -rf` 这样的高危操作，需要检查后面的变量名是否为空，比如：`rm -rf $MYDIDR/*` 如果 `$MYDIR`为空，结果是灾难性的。
+- 考虑使用 "find/while" 而不是 “for/find”。如：`for F in $(find . -type f) ; do echo $F; done` 写成 `find . -type f | while read F ; do echo $F ; done` 不但可以容忍空格，而且还更快。
+- 防御式编程，在正式执行命令前，把相关的东西都检查好，比如，文件目录有没有存在。
+
+
+
+最后推荐一些 Shell 和脚本的参考资料。
 
 各种有意思的命令拼装，一行命令走天涯:
 
@@ -271,6 +336,9 @@ Whi='\e[0;37m';     BWhi='\e[1;37m';    UWhi='\e[4;37m';    IWhi='\e[0;97m';    
 
 - 写bash脚本的框架  https://github.com/Bash-it/bash-it
 
+Google的Shell脚本的代码规范：
+
+- https://google.github.io/styleguide/shell.xml
 
 最后，别忘了几个和shell有关的索引资源：
 
@@ -283,7 +351,7 @@ Whi='\e[0;37m';     BWhi='\e[1;37m';    UWhi='\e[4;37m';    IWhi='\e[0;97m';    
 
 版本管理的工具对我来说已经不仅仅不是管理代码的工具了。任何需要不断优化，不断修改的内容都需要进行版本管理。
 
-版本管理的工具很多。现在还有好些人还不喜欢 Git 还在用 svn，那是因为他们并不知道 Git 的强大之处，这种脱机的版本管理可以让你在没有网的情况下提效代码变更，再加上 Git 切换 branch 快得不行，merge brach 时会把 branch 的改动情况一同 merge 了，再有 stash，cherry-pick 等等这样的黑魔法加持，你的工作效率真的很爽的。如今最好用的应该就是 **Git** 了，在加上最近 **GitHub** 私有仓库的开放，让这一优势继续扩大。
+版本管理的工具很多。现在还有好些人还不喜欢 Git 还在用 svn，那是因为他们并不知道 Git 的强大之处，这种脱机的版本管理可以让你在没有网的情况下提效代码变更，再加上 Git 切换 branch 快得不行，merge brach 时会把 branch 的改动情况一同 merge 了，这样可以让你看到整个历史。再有 stash，cherry-pick 等等这样的黑魔法加持，你的工作效率真的很爽的。如今最好用的应该就是 **Git** 了，在加上最近 **GitHub** 私有仓库的开放，让这一优势继续扩大。
 
 Git 这么好用的原因来源于其底层数据结构的设计，非常的有意思，如果你接触过区块链，你会发现 Git 底层的数据结构与区块链的数据结构有异曲同工之处。
 
@@ -292,6 +360,16 @@ Git 除了可以完成通常的版本管理之外，它还拥有一些很神奇�
 - 帮你找 bug 的命令: **git bisect**，通过二分搜索的方式来帮助你定位到引入 bug 的 commit。
 - 可以帮助你洞察一切的 **git blame** 可以给你文件的每行信息都进行注释，然后就可以看到关于该行修改的每一次 commit 的哈希标签、作者和提交日期。
 - 可以帮你恢复一切的 **git reflog**，通常我们 **git reset** 命令都是慎用的，要不然就坏事了，但是 git relog 在你将变化提交之前，可以帮助你回到任何修改之前，包括 git reset。但是 relog 只是保存在本地，而且不是永久保存，有一个可以配置的过期时间。
+
+除此之外，还有一些git的小技巧：
+
+- 如果你当前修改的文档在你本地的master上，然后你想把这个修改迁移到一个branch上，这样方便你做PR，如果这些修改还没有被add，那么你可以使用 `git checkout -b new_branch_name` 来完成。
+- 如果你commit后，还没有push，你想修改一下这前的commit，你可以使用 `git commit --amend`
+- 使用 `git pull --rebase` 可以避免出现一个 merge buble。
+- 如果你要删除远程分支，可以使用 `git push origin --delete <remote-branchname>`
+- 使用 `git add -p` 可以让你挑选修改，这样你可以把你的一次大改动变成多个提交。
+- `git checkout -p` 和 `git add -p` 类似，如果让你挑选你想checkout的修改。
+- 你知道你可以使用时间在你的git命令行上吗？比如：`git diff HEAD@{'2 months ago'}` 或 `git diff HEAD@{yesterday}` 或 `git diff HEAD@{'2010-01-01 12:00:00'}` 
 
 有时候，设置一下 Git 的别名也是可以让你更高效工作的一件事，比如：
 
