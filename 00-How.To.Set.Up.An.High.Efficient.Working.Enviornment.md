@@ -95,33 +95,36 @@ alias sock5='ssh -D 8080 -q -C -N -f user@your.server'
 
 命令行中除了原生的命令之外，还有很多可以提升使用体验的工具。下面罗列一些很不错的命令，把原生的命令增强地很厉害:
 
-- **fasd** 增强了 `cd` 命令 （https://github.com/clvv/fasd ）。
+- **fasd** 增强了 `cd` 命令 (https://github.com/clvv/fasd)。
 
-- **bat** 增强了 `cat` 命令 （https://github.com/sharkdp/bat ）。如果你想要有语法高亮的 `cat`，可以试试 **ccat**(https://github.com/jingweno/ccat)
+- **bat** 增强了 `cat` 命令 (https://github.com/sharkdp/bat)。如果你想要有语法高亮的 `cat`，可以试试 **ccat**(https://github.com/jingweno/ccat)
 
-- **exa** 增强了 `ls` 命令（https://github.com/ogham/exa ），如果你需要在很多目录上浏览各种文件 ，**ranger** 命令可以比 `cd` 和 `cat` 更有效率（https://github.com/ranger/ranger ），甚至可以在你的终端预览图片。
+- **exa** 增强了 `ls` 命令(https://github.com/ogham/exa），如果你需要在很多目录上浏览各种文件 ，**ranger** 命令可以比 `cd` 和 `cat` 更有效率（https://github.com/ranger/ranger)，甚至可以在你的终端预览图片。
 
-- **fd** 是一个比 `find` 更简单更快的命令（https://github.com/sharkdp/fd ），他还会自动地忽略掉一些你配置在 `.gitignore` 中的文件，以及 `.git` 下的文件。
+- **fd** 是一个比 `find` 更简单更快的命令(https://github.com/sharkdp/fd)，他还会自动地忽略掉一些你配置在 `.gitignore` 中的文件，以及 `.git` 下的文件。
 
-- `grep` 是一个上古神器，然而，**ack**（https://beyondgrep.com/ ）、**ag** （https://github.com/ggreer/the_silver_searcher ）和 **rg**（https://github.com/BurntSushi/ripgrep ）是更好的grep，和上面的fd一样，在递归目录匹配的时候，会忽略到你配置在 .gitignore 中的规则。另外，我们会经常玩  `command | grep “pattern”` 这样的命令，**fzf**（https://github.com/junegunn/fzf ）会是一个很好用的命令，神器。
 
-- `rm` 是一个危险的命令，尤其是各种 `rm -rf …`，所以，**trash**（https://github.com/andreafrancia/trash-cli/ ）是一个更好的删除命令。
+- **fzf** 是另外一个很好用的文件搜索神器 (https://github.com/junegunn/fzf)，其主要是搜索当前目录以下的文件，还可以使用 `fzf --preview 'cat {}'` 边搜索文件边浏览内容。
 
-- `man` 命令是好读文档的命令，但是man的文档有时候太长了，所以，你可以试式 **tldr**（https://github.com/tldr-pages/tldr ）命令，把文档上的一些示例整出来给你看。
+- `grep` 是一个上古神器，然而，**ack** (https://beyondgrep.com/)、**ag** (https://github.com/ggreer/the_silver_searcher) 和 **rg** (https://github.com/BurntSushi/ripgrep) 是更好的grep，和上面的fd一样，在递归目录匹配的时候，会忽略到你配置在 .gitignore 中的规则。
 
-- 如果你想要一个图示化的`ping`，你可以试试 **prettyping** （https://github.com/denilsonsa/prettyping ）。
+- `rm` 是一个危险的命令，尤其是各种 `rm -rf …`，所以，**trash**（https://github.com/andreafrancia/trash-cli/) 是一个更好的删除命令。
 
-- 如果你想搜索以前打过的命令，不要再用 Ctrl +R 了，你可以使用 **fzf** （https://github.com/junegunn/fzf ）你用过就知道有多强了。
+- `man` 命令是好读文档的命令，但是man的文档有时候太长了，所以，你可以试式 **tldr**（https://github.com/tldr-pages/tldr) 命令，把文档上的一些示例整出来给你看。
 
-- **htop** （Installation directions） 是 top 的一个加强版。然而，还有很多的各式各样的top，比如：用于看IO负载的 **iotop**，网络负载的 **iftop**, 以及把这些top都集成在一起的 **atop**。
+- 如果你想要一个图示化的`ping`，你可以试试 **prettyping** (https://github.com/denilsonsa/prettyping) 。
 
-- **ncdu** （Installation directions） 比 du 好用多了用。另一个选择是 nnn（https://github.com/jarun/nnn ）。
+- 如果你想搜索以前打过的命令，不要再用 Ctrl +R 了，你可以使用加强版的 **hstr** (https://github.com/dvorka/hstr) 。
 
-- 如果你想把你的命令行操作建录制成一个 SVG 动图，那么你可以尝试使用 **asciinema** （https://asciinema.org/ ）和 **svg-trem** （https://github.com/marionebl/svg-term-cli ）。
+- **htop** (https://hisham.hm/htop/） 是 top 的一个加强版。然而，还有很多的各式各样的top，比如：用于看IO负载的 **iotop** (http://guichaz.free.fr/iotop/)，网络负载的 **iftop** (http://www.ex-parrot.com/~pdw/iftop/), 以及把这些top都集成在一起的 **atop** (https://github.com/Atoptool/atop)。
+
+- **ncdu** (https://dev.yorhel.nl/ncdu) 比 du 好用多了用。另一个选择是 nnn（https://github.com/jarun/nnn) 。
+
+- 如果你想把你的命令行操作建录制成一个 SVG 动图，那么你可以尝试使用 **asciinema** (https://asciinema.org/) 和 **svg-trem** (https://github.com/marionebl/svg-term-cli) 。
 
 - **httpie**(https://github.com/jakubroztocil/httpie) 是一个可以用来替代 curl 和 wget 的 http 客户端，httpie 支持 json 和语法高亮，可以使用简单的语法进行 http 访问: `http -v github.com`。
 
-- **tmux** 在需要经常登录远程服务器工作的时候会很有用，可以保持远程登录的会话，还可以在一个窗口中查看多个 shell 的状态。
+- **tmux** (https://github.com/tmux/tmux) 在需要经常登录远程服务器工作的时候会很有用，可以保持远程登录的会话，还可以在一个窗口中查看多个 shell 的状态。
 
 - **Taskbook**(https://github.com/klaussinani/taskbook) 是可以完全在命令行中使用的任务管理器 ，支持 ToDo 管理，还可以为每个任务加上优先级。
 
