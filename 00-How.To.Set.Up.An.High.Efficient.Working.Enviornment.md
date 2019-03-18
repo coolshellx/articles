@@ -180,7 +180,9 @@ $ ./zsh-script.sh &
 
 crontab 是 Linux 中的一个定时器，可以定制执行任务，上面的表示每分钟执行一次脚本。
 
-我最喜欢的就是 **zsh** + **oh-my-zsh** + **zsh-autosuggestions** 的组合，你也可以试试看。其中 zsh 和 oh-my-zsh 算是常规操作了，但是 zsh-autosuggestions 特别有用，可以超级快速的帮你补全你输入过的命令，让命令行的操作更加高效。 
+我最喜欢的就是 **zsh** + **[oh-my-zsh](https://ohmyz.sh/)** + **[zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)** 的组合，你也可以试试看。其中 zsh 和 oh-my-zsh 算是常规操作了，但是 zsh-autosuggestions 特别有用，可以超级快速的帮你补全你输入过的命令，让命令行的操作更加高效。 只需要简单的安装配置，你的命令行马上变得高档大气上档次，狂拽炫酷吊炸天。
+
+另外，**[fish](https://fishshell.com/)** 也是另外一个牛逼的shell，比如：命令行自动完成（根据历史记录），命令行命令高亮，当你要输入命令行参数的时候，自动提示有哪些参数…… fish在很多地方也是用起来很爽的。和上面的 oh-my-zsh 有点不分伯仲了。
 
 你也许会说，用 Python 脚本或 PHP 来写脚本会比 Shell 更好更没有 bug，但我要申辩一下:
 
