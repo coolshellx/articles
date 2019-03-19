@@ -49,7 +49,7 @@
 - junegunn 是韩国的一个大牛，擅长写 Vim 插件，他的 Vim 插件看起来总是令人赏心悦目：https://github.com/junegunn/vim-plug
 - SpaceVim，一个开箱即用的 Vim 配置，对新手很友好，和 Spacemacs 一样，有着很完善的文档：https://github.com/SpaceVim/SpaceVim
 - reddit 的 Vim 频道，有很多最前沿的 Vim 技巧:https://www.reddit.com/r/vim/ 
-
+- Vimtutor，自带的新手指引：`vimtutor`
 
 
 ### 命令行篇
@@ -99,7 +99,7 @@ alias sock5='ssh -D 8080 -q -C -N -f user@your.server'
 
 - **bat** 增强了 `cat` 命令 (https://github.com/sharkdp/bat)。如果你想要有语法高亮的 `cat`，可以试试 **ccat**(https://github.com/jingweno/ccat)
 
-- **exa** 增强了 `ls` 命令(https://github.com/ogham/exa），如果你需要在很多目录上浏览各种文件 ，**ranger** 命令可以比 `cd` 和 `cat` 更有效率（https://github.com/ranger/ranger)，甚至可以在你的终端预览图片。
+- **exa** 增强了 `ls` 命令(https://github.com/ogham/exa），如果你需要在很多目录上浏览各种文件 ，**lsd**(https://github.com/Peltoche/lsd)在 `ls` 的基础上可以显示文件夹和不同类型文件的图标，**ranger** 命令可以比 `cd` 和 `cat` 更有效率（https://github.com/ranger/ranger)，甚至可以在你的终端预览图片。
 
 - **fd** 是一个比 `find` 更简单更快的命令(https://github.com/sharkdp/fd)，他还会自动地忽略掉一些你配置在 `.gitignore` 中的文件，以及 `.git` 下的文件。
 
@@ -116,7 +116,7 @@ alias sock5='ssh -D 8080 -q -C -N -f user@your.server'
 
 - 如果你想搜索以前打过的命令，不要再用 Ctrl +R 了，你可以使用加强版的 **hstr** (https://github.com/dvorka/hstr) 。
 
-- **htop** (https://hisham.hm/htop/） 是 top 的一个加强版。然而，还有很多的各式各样的top，比如：用于看IO负载的 **iotop** (http://guichaz.free.fr/iotop/)，网络负载的 **iftop** (http://www.ex-parrot.com/~pdw/iftop/), 以及把这些top都集成在一起的 **atop** (https://github.com/Atoptool/atop)。
+- **htop** (https://hisham.hm/htop/） 是 top 的一个加强版。然而，还有很多的各式各样的top，比如：用于看IO负载的 **iotop** (http://guichaz.free.fr/iotop/)，网络负载的 **iftop** (http://www.ex-parrot.com/~pdw/iftop/), 以及把这些top都集成在一起的 **atop** (https://github.com/Atoptool/atop)。另外 **nvtop** 可以查看 Nvidia GPU 的情况，适合做深度学习的同学。
 
 - **ncdu** (https://dev.yorhel.nl/ncdu) 比 du 好用多了用。另一个选择是 nnn（https://github.com/jarun/nnn) 。
 
