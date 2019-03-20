@@ -1,8 +1,8 @@
 # Articles
 
-This repo is used to write the aritcles collabratively.
+This repo is used to write the articles collabratively.
 
-And those aritcles would be publised to Coolshell WeChat, and some of them will be synced to CoolShell.cn
+And those articles would be publised to Coolshell WeChat, and some of them will be synced to CoolShell.cn
 
 
 for the article file name convension, we prefer using the following format:
