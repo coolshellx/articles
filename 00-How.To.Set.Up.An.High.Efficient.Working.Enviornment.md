@@ -16,11 +16,11 @@
 
 **Vim** 和 **Emacs** 就是非常值得投资的编辑器，如果你决定开始学习 Vim/Emacs，刚开始的时候会感觉高很痛苦，甚至会伤害到自己的生产力，但是没关系，通过两三周的专注练习后，就可以通过学习编辑器的死亡之谷，很快就可以赚回票价了。
 
-使用 Vim/Emacs 的另一个重要好处是，当你在处理一些线上问题的时候，有时候需要一个 IDE，你发现在一个Term 终端上是运行不了图形界面的编辑器了，你只有 Vim/Emacs 这样的选择。在 Coolshell 上有一篇《无插件Vim 编程技巧》（https://coolshell.cn/articles/11312.html）你可以移步一看。
+使用 Vim/Emacs 的另一个重要好处是，当你在处理一些线上问题的时候，有时候需要一个 IDE，你发现在一个Term 终端上是运行不了图形界面的编辑器了，你只有 Vim/Emacs 这样的选择。在 Coolshell 上有一篇《[无插件Vim 编程技巧](https://coolshell.cn/articles/11312.html)》你可以移步一看。
 
 为什么不学习 Notepad，因为，**使用高效编辑器的终极目标是抛弃鼠标，让手编辑的速度可以跟的上大脑思考的速度**。就我自己来说，从大二开始接触 Emacs 开始，已经使用 5 年了，通过不断的对 Emacs 进行定制，已经有了一套自己的使用模式了，每次打开 Emacs 就像是打开了自己才知道的秘籍，这是其他 IDE 都没有办法比的，通过不断定制自己的工具，可以激发自己创造的欲望。
 
-但是我不参加编辑器的圣战，这些都是无意义的口水战。在一次接触了 Vim 之后，我反而喜欢上 Vim 的编辑模式了，于是在 Emacs 中使用上了 Vim 的编辑模式，实际的情况是这两者并不冲突（皓哥翻译的那篇 《简明 Vim 练级攻略》（https://coolshell.cn/articles/5426.html）文章非常不错）。
+但是我不参加编辑器的圣战，这些都是无意义的口水战。在一次接触了 Vim 之后，我反而喜欢上 Vim 的编辑模式了，于是在 Emacs 中使用上了 Vim 的编辑模式，实际的情况是这两者并不冲突（皓哥翻译的那篇 《[简明 Vim 练级攻略](https://coolshell.cn/articles/5426.html)》文章非常不错）。
 
 在 Emacs 上，有很多有用的特性和插件。 Emacs 的 **org-mode**，这个工具用来写作，还可用来做任务管理，任务计时器，甚至可以用来做表格的计算。功能上已经完全不是 markdown 能比的，但是遗憾的是目前只能在 Emacs 中使用（貌似有人在 Vim 上实现过）。
 
@@ -99,7 +99,7 @@ alias sock5='ssh -D 8080 -q -C -N -f user@your.server'
 
 - **bat** 增强了 `cat` 命令 (https://github.com/sharkdp/bat)。如果你想要有语法高亮的 `cat`，可以试试 **ccat**(https://github.com/jingweno/ccat)
 
-- **exa** 增强了 `ls` 命令(https://github.com/ogham/exa），如果你需要在很多目录上浏览各种文件 ，**lsd**(https://github.com/Peltoche/lsd)在 `ls` 的基础上可以显示文件夹和不同类型文件的图标，**ranger** 命令可以比 `cd` 和 `cat` 更有效率（https://github.com/ranger/ranger)，甚至可以在你的终端预览图片。
+- **exa** 增强了 `ls` 命令(https://github.com/ogham/exa)，如果你需要在很多目录上浏览各种文件 ，**lsd**(https://github.com/Peltoche/lsd)在 `ls` 的基础上可以显示文件夹和不同类型文件的图标，**ranger** 命令可以比 `cd` 和 `cat` 更有效率（https://github.com/ranger/ranger)，甚至可以在你的终端预览图片。
 
 - **fd** 是一个比 `find` 更简单更快的命令(https://github.com/sharkdp/fd)，他还会自动地忽略掉一些你配置在 `.gitignore` 中的文件，以及 `.git` 下的文件。
 
