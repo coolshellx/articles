@@ -1,8 +1,11 @@
 ### 生命的意义----正则表达式幽默一则
 
 英文原文链接：https://www.rexegg.com/regex-humor.html#meaning-of-life
+
 作者：Douglas Adams
+
 翻译：无名氏
+
 
 “哦！沉思计算机，”他说，“我们之所以设计制造你是为了执行这样一个任务，我们希望你告诉我们。。。”，他停顿了一下，“终极答案”。
 
