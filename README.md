@@ -10,4 +10,4 @@ for the article file name convension, we prefer using the following format:
 `01-This.Is.An.Article.File.Name.Example.md`
 
 - `01-` is the sequence number used to sort the articles.
-- Every world start with upcase and seprated by `.`
+- Every wold starts with uppercase and separated by `.`
