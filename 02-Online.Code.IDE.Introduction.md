@@ -7,14 +7,31 @@
 3. 方便于初学者或是想尝试一段试验型的代码的场景。
 4. 方便教学，面试，结对编程，练习……
 5. 方便快速地检查代码，或是进行一些比较小的代码修改。
+6. 对于一些比较流行的Serverless的应用，这种在线的代码编辑器就很有用处了。
 
-所以，这种在线代码IDE不需要运行环境，打开就用，还是有很多用处的。这篇文章，将会介绍几个不错的在引编辑器。
+所以，这种在线代码IDE不需要运行环境，打开就用，还是有很多用处的。这也是为什么全世界有很多在线代码编辑器。
 
-## CodeSandbox
+这篇文章，将会介绍几个不错的在线编辑器。
 
-[CodeSandbox](https://codesandbox.io/) 是一个在线的前端代码项目IDE，支持 React.js，Vue.js，Angular.js，Preact.js，Vanilla，Svelte，Dojo…… 前端框架，直接写直接预览结果，不需要使用什么如npm install的命令行，就可以直接把项目跑起来了，还要吧在线的从你的Github把代码同步过来，以及把修改的代码再同步回去。在打开编辑器的时候，还有一个实时显示的预览窗，只要你的代码做了修改，结果就会立马显示在预览窗里了，这种反馈让人很爽。另外，还可以如大多数在线IDE一样，可以做结构编程（多人同时修改）。当然，它也能像 [CodePen](https://codepen.io/)、[Jsfiddle](https://jsfiddle.net/) 或 [Jsbin](https://jsbin.com/) 一样可以把代码share出去，成为一个playgrand。
+## 前端代码编辑器
 
-不过，这个前端的在线编辑最强大的还不是这些，去年十月，CodeSandbox 把自己的在线编辑变成了 VSCode，设计者把CodeSandbox整得跟VSCode一模一样，完全就是一个VSCode的在线的版本。让用户可以在 CodeSandbox 中使用 VSCode 的键绑定、代码模板、命令、多视图编辑等诸多功能。但是对于VSCode的扩展，CodeSandbox 那时还只支持很少的扩展。 
+### StackBlitz
+
+[StackBlitz](https://stackblitz.com/) 是一个在线的前端代码项目IDE，可以创建Angular，React，Ionic，TypeScript相关的项目，支持在线代码编写和自动处理安装依赖关系、编译、效果的实时预览，不需要命令行的配置，StackBlitz 还支持通过 npm 安装依赖包，并且当你复制粘贴代码进去时，能自动检测缺少的依赖并提示你安装。另外，每一个 StackBlitz 项目都有专属的 URL，因此你能像本地项目一样，新开一个窗口来预览和调试，而且还是热更新的。
+
+另外，我们可以看到 StackBlitz 的界面风格和 VS Code 非常相似，除了界面与 VS Code 非常相似，快捷键也几乎一模一样，如果你平时就习惯使用 VS Code，那完全可以无缝切换。
+
+![](https://cdn-images-1.medium.com/max/1600/1*uf0RA0ofJi0m_mqdJxkTTg.gif)
+
+是的，这得益于VS Code的源代码以MIT协议开源。这使得大家能够免费获得VS Code的核心代码，开发自己的产品。VS Code自带了TypeScript和Node.js的支持，同时，VS Code为编程语言工作者提供了统一的API，即Language Server Protocol 和 Code Debugging Protocol。这使得，只要你实现两个API，就可以获得类似IDE的开发和调试体验。
+
+此外，StackBlitz 还支持比如分享、下载等等功能，也可以像 [CodePen](https://codepen.io/)、[Jsfiddle](https://jsfiddle.net/) 或 [Jsbin](https://jsbin.com/) 一样可以把代码share出去。
+
+### CodeSandbox
+
+[CodeSandbox](https://codesandbox.io/) 是一个在线的前端代码项目IDE，支持 React.js，Vue.js，Angular.js，Preact.js，Vanilla，Svelte，Dojo…… 前端框架，和前面的StackBlitz一样，也是直接写直接预览结果，不需要使用什么如npm install的命令行，就可以直接把项目跑起来了，还可以在线的从你的Github把代码同步过来，以及把修改的代码再同步回去。在打开编辑器的时候，还有一个实时显示的预览窗，只要你的代码做了修改，结果就会立马显示在预览窗里了，这种反馈让人很爽。另外，还可以如大多数在线IDE一样，可以做结构编程（多人同时修改）。当然，它也能像 [CodePen](https://codepen.io/)、[Jsfiddle](https://jsfiddle.net/) 或 [Jsbin](https://jsbin.com/) 一样可以把代码share出去，成为一个playgrand。
+
+不过，这个前端的在线编辑最强大的还不是这些，去年十月，CodeSandbox 跟StackBlitz一样，把自己的在线编辑集成了VSCode，这使得CodeSandbox和VS Code一样的界面和操作方式。 CodeSandbox 中使用 VSCode 的键绑定、代码模板、命令、多视图编辑等诸多功能，并可以让用户导入其VS Code中的设，并还支持好些VS Code的扩展，这使用得CodeSandbox一下子比StackBlitz强大了好多。 
 
 这两天（2019年3月），其发布了 **V3** 版本，这是 CodeSandbox 诞生以来最大的更新。其中包括可以直接使用 VSCode 扩展，比如：
 
