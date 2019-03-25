@@ -105,7 +105,7 @@ HMACSHA256(
 
 传统的基于 Session 的会话管理逻辑大致如下时序图所示：
 
-[image:67A42695-BCCF-4BA6-BF65-736F85BF7FCD-37810-000145B314CA3A64/基于 Session 的会话管理时序图.png]
+![](https://ws1.sinaimg.cn/large/e2bc63f6ly1g1f457524fj20iu0n075b.jpg)
 
 相比较而言，传统的 Session-Cookie 方式会有几点问题：
 1. 频繁查找 Session 的开销过大。因为 Session 存储在服务端，大部分接口的请求都需要查找 Session 以获取对应用户身份。不管是存储在持久层（数据库）还是内存中，频繁查找带来的压力会随着用户量的上升而急剧增大。
