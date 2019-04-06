@@ -118,7 +118,7 @@ HMACSHA256(
 3. 尽可能采用 HTTPS，确保不被窃听。
 4. 如果存放在 Cookie 中则强烈建议开启 Http Only，其实官方推荐是放在 LocalStorage 里，然后通过 Header 头进行传递。
 
-> Cookie 的 HTTP Only 这个 Flag 和 HTTPS 并不冲突，你会发现其实还有一个 Secure 的 Flag，这个就是指 HTTPS 了，这两个 Flag 互不影响的，开启 HTTP Only 会导致前端 JavaScript 无法读取该 Cookid，更多的是为了防止**类 XSS 攻击**。
+> Cookie 的 HTTP Only 这个 Flag 和 HTTPS 并不冲突，你会发现其实还有一个 Secure 的 Flag，这个就是指 HTTPS 了，这两个 Flag 互不影响的，开启 HTTP Only 会导致前端 JavaScript 无法读取该 Cookie，更多的是为了防止**类 XSS 攻击**。
 
 ## 一些问题和思考
 JWT 的缺点其实也蛮多的，适不适用得具体看业务场景，哪个优势更大用哪个。（一点感悟：在写这篇文章前一直是 JWT 的坚定拥护者，越写越发现其实传统的 Session-Cookie 方案挺好的，很成熟。它们两者都有优缺点，选型上要多思考斟酌才行。）
