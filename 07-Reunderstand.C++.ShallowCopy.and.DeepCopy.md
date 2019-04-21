@@ -63,7 +63,7 @@ int main(int argc,const char *argv[])
 > （3） 当函数的返回值是类的对象时，当函数调用结束时，需要将函数的对象复制到一个临时的对象并传给该函数的调用处，也会发生对象的复制，例如：
 
 ```c++
-void fun2()
+Base fun2()
 {
 	//TODO
 	Base base;
