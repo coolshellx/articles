@@ -99,8 +99,8 @@ Base::Base(const Base& t)
 当然了，有人说，我怎么一般没实现这个函数呢，照样可以进行类的复制操作啊，这是因为以上代码不用我们编写，编译器会为我们自动生成。但是如果认为这样就可以解决对象的复制问题，那就错了，让我们来考虑以下一段代码：
 
 ```c++
-//Author:github.com/rongweihe
-//Date  : 2019/04/20
+//Author:rongweihe
+//Date  :2019/04/20
 #include <bits/stdc++.h>
 using namespace std;
 //浅拷贝：对于基本类型的数据和简单的对象，它们之间的拷贝非常简单；就是按位复制内存
@@ -171,7 +171,7 @@ public:
         c--;
     }
     // 拷贝构造函数
-    Base(const Base2& t)
+    Base(const Base& t)
     {
         a=t.a;
         b=t.b;
