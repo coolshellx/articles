@@ -279,13 +279,13 @@ public:
         cout<<"new1 and &p = "<<p<<endl;
     }
     Base(const Base& t)
-	{
+    {
 		w = t.w;
 		h = t.h;
 		p = new int;	// 为新对象重新动态分配空间
 		*p = *(t.p);
 		 cout<<"new2 and &p = "<<p<<endl;
-	}
+    }
     ~Base()//析构函数，释放动态分配的空间
     {
         if(p!=NULL)
