@@ -170,7 +170,7 @@ public:
     {
         cout<<"调用析构函数"<<endl;
         c--;
-	cout<<"~c="<<c<<endl;
+	cout<<"~c="<<c<<endl;//输出每次析构之后计数器值
     }
     // 拷贝构造函数
     Base(const Base& t)
