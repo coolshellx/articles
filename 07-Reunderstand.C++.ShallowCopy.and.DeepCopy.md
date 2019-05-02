@@ -170,6 +170,7 @@ public:
     {
         cout<<"调用析构函数"<<endl;
         c--;
+	cout<<"~c="<<c<<endl;
     }
     // 拷贝构造函数
     Base(const Base& t)
@@ -193,8 +194,8 @@ int Base::c = 0;
 
 运行结果
 
-- obj11.getC()=1
-- obj22.getC()=2
+- obj1.getC()=1
+- obj2.getC()=2
 - 调用析构函数
 - ~c=1
 - 调用析构函数
