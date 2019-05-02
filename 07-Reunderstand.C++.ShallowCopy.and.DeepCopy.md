@@ -115,6 +115,7 @@ public:
     {
         cout<<"调用析构函数"<<endl;
         c--;
+	cout<<"~c="<<c<<endl;
     }
     static int getC()
     {
