@@ -125,21 +125,37 @@ int main()
 
 下面是代码的运行结果：
 step: 1, elapsed time: 66.3925ms
+
 step: 2, elapsed time: 34.1113ms
+
 step: 4, elapsed time: 26.5611ms
+
 step: 8, elapsed time: 27.8086ms
+
 step: 16, elapsed time: 27.8812ms
+
 step: 32, elapsed time: 19.7227ms
+
 step: 64, elapsed time: 11.3431ms
+
 step: 128, elapsed time: 4.7402ms
+
 step: 256, elapsed time: 2.4116ms
+
 step: 512, elapsed time: 2.0155ms
+
 step: 1024, elapsed time: 1.7971ms
+
 step: 2048, elapsed time: 1.1497ms
+
 step: 4096, elapsed time: 0.5761ms
+
 step: 8192, elapsed time: 0.2719ms
+
 step: 16384, elapsed time: 0.1615ms
+
 step: 32768, elapsed time: 0.1099ms
+
 Press any key to continue . . .
 
 步长为2、4、8、16的时候耗时都差不多，这是因为cache line的容量是64字节，因此这几个步长对内存的访问量虽然大大不同，但是耗时都接近。值得注意的是，步长1和2的耗时差别相当大。我觉得cache line在这两个步长依然起作用的，只是两者的“计算消耗”耗时差别比较大，例如循环计数加法运算等等，所以1和2之间的差别可以理解为误差。
@@ -194,4 +210,7 @@ int main(int argc, char** argv)
 ```
 
 在以上的代码中，我们可以试着用两种不同的size分配内存并测量运行时间，我们发现第一种方式和第二种方式有明显的性能差别。在我的电脑上，第一种方式耗时7030ms，第二种方式耗时3369ms。
-第一种方式中，两个线程同时访问两个相邻的内存地址，并且这两个地址会被映射为同一个cache line，所以这两个线程会把同一段cache line的内存导入cache。当一个线程修改一个内存地址的内容的时候，另一个线程不得不同步cache line，而从测试结果来看同步操作的成本相当高。解决这个问题的方法就是避免两个线程访问的内存地址落入同一个cache line；第二种方式增加了两个相邻内存地址的步长，从而避免了false cache的问题。
+
+第一种方式中，两个线程同时访问两个相邻的内存地址，并且这两个地址会被映射为同一个cache line，所以这两个线程会把同一段cache line的内存导入各自的cache。当一个线程修改一个内存地址的内容的时候，另一个线程不得不同步cache line，而从测试结果来看同步操作的成本相当高。
+
+解决这个问题的方法就是避免两个线程访问的内存地址落入同一个cache line；第二种方式增加了两个相邻内存地址的步长，从而避免了false cache的问题。
