@@ -312,9 +312,9 @@ Press any key to continue . . .
 
 下图展示了这种情况。
 
-![false cache](https://github.com/coolshellx/articles/blob/master/false_cache.png)
+![false sharing](https://github.com/coolshellx/articles/blob/master/false_cache.png)
 
-两个线程1和2分别运行在core0和core1上面，它们分别访问内存地址0xA000（保存了值为1的整数）以及0xA004（保存了值为2的整数）。因为这两个地址可以被映射为同一个cache line，所以core0和core1的cache都导入了一条包含0xA000以及0xA004的cache line。那么当线程1写0xA000的时候，即使线程2并没有访问0xA000，它的cache line也要做同步。而这有潜在的性能问题。
+两个线程1和2分别运行在core0和core1上面，它们分别访问内存地址0xA000（保存了值为1的整数）以及0xA004（保存了值为2的整数）。因为这两个地址可以被映射为同一个cache line，所以core0和core1的cache都导入了一条包含0xA000以及0xA004的cache line。当线程1写0xA000的时候，即使线程2并没有访问0xA000，它的cache line也要做同步。而这有潜在的性能问题。
 
 下面的代码来自这个链接：
 https://vorbrodt.blog/2019/02/02/cache-lines/
@@ -366,7 +366,7 @@ int main(int argc, char** argv)
 
 第一种方式中，两个线程同时访问两个相邻的内存地址，并且这两个地址会被映射为同一个cache line，所以这两个线程会把同一段cache line的内存导入各自的cache。当一个线程修改一个内存地址的内容的时候，另一个线程不得不同步cache line，而从测试结果来看同步操作的成本相当高。
 
-解决这个问题的方法就是避免两个线程访问的内存地址落入同一个cache line；第二种方式增加了两个内存地址间的偏移，从而避免了false cache的问题。
+解决这个问题的方法就是避免两个线程访问的内存地址落入同一个cache line；第二种方式增加了两个内存地址间的偏移，从而避免了false sharing的问题。
 
 ### 5. 一些有用的链接
 intel关于false sharing的链接
